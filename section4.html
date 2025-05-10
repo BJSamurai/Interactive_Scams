@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Do you know SCAM? Section 4</title>
+  <link rel="stylesheet" href="section4.css" />
+</head>
+<body>
+    <!-- Navigation bar with main button on left, section buttons on right -->
+    <div class="main-nav">
+        <div class="nav-left">
+            <button onclick="window.location.href='main.html'">Safe Main</button>
+        </div>
+        
+        <div class="nav-right">
+            <button onclick="window.location.href='section3.html'">Back to Section 3</button>
+        </div>
+    </div>
+
+    <!-- Main content container -->
+    <div class="container">
+      <h1>Downloaded Files Can Be Deceptive</h1>
+      <p>
+        Sometimes, websites can trick you into downloading files without your knowledge.
+        When you click on a button or link, it might start a download in addition to taking you somewhere else.
+        This is another technique scammers use to distribute malware.
+      </p>
+      <p>
+        Click the button below to go back to the main page. When you do, notice that it also downloads this webpage.
+        This demonstrates how easily a website can initiate downloads without making it obvious.
+      </p>
+      <!-- This button will both redirect to main.html and trigger a download -->
+      <button id="mainButton">Go back to Main</button>
+    </div>
+
+  <script src="section4.js"></script>
+</body>
+</html>

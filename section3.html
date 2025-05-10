@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do you know SCAM? Section 3</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="section3.css">
+    <link rel="stylesheet" href="section3_nav.css">
+</head>
+<body>
+    <!-- New navigation bar with main button on left, section buttons on right -->
+    <div class="main-nav">
+        <div class="nav-left">
+            <button onclick="window.location.href='main.html'">Main</button>
+        </div>
+        
+        <div class="nav-right">
+            <button onclick="window.location.href='section2.html'">Back to Section 2</button>
+            <button onclick="window.location.href='section4.html'">Go to Section 4</button>
+        </div>
+    </div>
+
+    <!-- Keep original container and its contents completely unchanged -->
+    <div class="container">
+        <h1>HTML Link Replacer</h1>
+        <p class="description">Upload an HTML file to replace all hyperlinks</p>
+        
+        <div id="upload-section" class="upload-section">
+            <div id="drop-area">
+                <p>Drag & drop your HTML file here</p>
+                <p>or</p>
+                <input type="file" id="file-input" accept=".html,.htm">
+                <button id="select-file-btn" class="btn upload-btn">Select HTML File</button>
+            </div>
+            <div id="file-info" class="file-info hidden">
+                <p>Selected file: <span id="file-name"></span></p>
+                <button id="process-btn" class="btn process-btn">Replace Links</button>
+            </div>
+        </div>
+        
+        <div id="result-section" class="result-section hidden">
+            <h2>Links Replaced Successfully!</h2>
+            <p><span id="link-count"></span> links have been replaced with baidu.com</p>
+            <button id="download-btn" class="btn download-btn">Download Modified File</button>
+            <button id="reset-btn" class="btn reset-btn">Process Another File</button>
+        </div>
+    </div>
+
+    <script src="section3.js"></script>
+</body>
+</html>

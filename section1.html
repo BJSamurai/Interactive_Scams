@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Section 1 : Simple Tricks</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .container {
+      background-color: white;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    hr {
+      display: none; /* Hide the original horizontal rules */
+    }
+    
+    .button-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin: 20px 0;
+    }
+    
+    .main-nav {
+      display: flex;
+      justify-content: space-between;
+      margin: 20px 0 30px 0;
+    }
+    
+    .warning {
+      background-color: #ffe0e0;
+      border-left: 4px solid #ff0000;
+      padding: 10px 15px;
+      margin: 15px 0;
+      font-weight: bold;
+    }
+    
+    img {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin: 15px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="main-nav">
+    <button onclick="window.location.href='main.html'">Main</button>
+    <button onclick="window.location.href='section2.html'">Go to Section 2</button>
+  </div>
+
+  <!-- Segment 1: Guess Which One is Right -->
+  <div class="container">
+    <h2>Guess Which One is Right</h2>
+    <p>Click the correct button to win, there are more than 1 correct button. Can you spot all of them?</p>
+    <p class="warning incorrect">***Please do not enter login info through ANY of these websites, use a trustworthy search engine instead.***</p>
+    
+    <div class="button-group">
+      <button onclick="pt1_checkAnswer('https://store.steampowered.com/')">https://store.steampowered.com/</button>
+      <button onclick="pt1_checkAnswer('https://store.steampowdered.com/')">https://store.steampowdered.com/</button>
+      <button onclick="pt1_checkAnswer('http://store.steampowder.com/')">http://store.steampowder.com/</button>
+      <button onclick="pt1_checkAnswer('http://store.stempowder.com/')">http://store.stempowder.com/</button>
+      <button onclick="pt1_checkAnswer('http://steamcomunity.com/')">http://steamcomunity.com/</button>
+      <button onclick="pt1_checkAnswer('https://store.steampowdered.com/')">https://store.steampowdered.com/</button>
+      <button onclick="pt1_checkAnswer('https://store.steampowered.co/')">https://store.steampowered.co/</button>
+      <button onclick="pt1_checkAnswer('https://store.steam-powered.com/')">https://store.steam-powered.com/</button>
+      <button onclick="pt1_checkAnswer('https://steampowered.store/')">https://steampowered.store/</button>
+      <button onclick="pt1_checkAnswer('https://store-steampowered.com/')">https://store-steampowered.com/</button>
+      <button onclick="pt1_checkAnswer('https://steampowered-support.com/')">https://steampowered-support.com/</button>
+      <button onclick="pt1_checkAnswer('https://store.steampowered.com/')">https://store.steampowered.com/</button>
+    </div>
+ 
+    <p id="result-message"></p>
+  </div>
+ 
+  <!-- Segment 2: Another set of look-alike links -->
+  <div class="container">
+    <h2>Guess the Real Game Platform</h2>
+    <p>Which of the following is the real platform? Click to find out:</p>
+    
+    <!-- Display image always -->
+    <img id="fake-image" src="fakeSteam.png" alt="Fake Steam" style="max-width: 100%;">
+    
+    <!-- Buttons for selecting the platform -->
+    <div class="button-group">
+      <button onclick="pt2_showResult('correct')">Right</button>
+      <button onclick="pt2_showResult('incorrect')">Left</button>
+    </div>
+   
+    <p id="result-message-2"></p>
+  </div>
+   
+  <!-- Segment 3: Informative paragraph -->
+  <div class="container">
+    <h2 onclick="pt3_invisible_redirect()" style="cursor: pointer;">The Dangers of Invisible Links</h2>
+    <p onclick="pt3_invisible_redirect()" style="cursor: pointer;">
+      Invisible or deceptive links are often used in phishing attacks or scams. They may appear legitimate but
+      redirect you to malicious websites designed to steal information or infect your device with malware.
+      Always double-check URLs, and be cautious of small spelling differences in trusted domain names.
+      I mean, why don't you try this invisible link? Try click the text.
+    </p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

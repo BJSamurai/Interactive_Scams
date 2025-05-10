@@ -1,0 +1,133 @@
+/* Navigation bar styling for section4.html */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 50px;
+    background-color: #f0f0f0;
+    transition: background-color 0.5s ease;
+  }
+  
+  h1 {
+    color: #333;
+  }
+
+  h2{
+    color: #333;
+  }
+
+  p{
+    color: #333;
+  }
+  
+  button {
+    background-color: #008cba;
+    color: white;
+    padding: 15px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #005f73;
+  }
+
+  .correct {
+    color: green;
+    font-weight: bold;
+  }
+  
+  .incorrect {
+    color: red;
+    font-weight: bold;
+  }
+
+  
+  
+/* Main navigation container */
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0 30px 0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Left side navigation (Main button) */
+.nav-left {
+    text-align: left;
+}
+
+/* Right side navigation (Section navigation) */
+.nav-right {
+    text-align: right;
+    display: flex;
+    gap: 10px;
+}
+
+/* Hide any original .main buttons that might be outside the container */
+.main-nav ~ button.main {
+    display: none;
+}
+
+/* Button styling consistent with the global styles.css */
+.main-nav button {
+    background-color: #008cba;
+    color: white;
+    padding: 15px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.main-nav button:hover {
+    background-color: #005f73;
+}
+
+/* Container styling */
+.container {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Make the download button stand out */
+#mainButton {
+    background-color: #e74c3c;
+    color: white;
+    padding: 15px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: block;
+    margin: 30px auto;
+}
+
+#mainButton:hover {
+    background-color: #c0392b;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .main-nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .nav-right {
+        justify-content: center;
+    }
+    
+    .nav-left {
+        text-align: center;
+    }
+}

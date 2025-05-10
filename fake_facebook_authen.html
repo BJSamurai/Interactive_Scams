@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Facebook Authentication</title>
+  <link rel="stylesheet" href="fake_facebook_authen.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="login-box">
+
+      <svg width="250" height="50" viewBox="0 0 250 50" xmlns="http://www.w3.org/2000/svg">
+        <style>
+          @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+          .logo-text {
+            font-family: 'Poppins', sans-serif;
+            font-size: 32px;
+            fill: #1877F2;
+            font-weight: 700;
+          }
+        </style>
+        <text x="0" y="35" class="logo-text">fakebook</text>
+      </svg>
+
+      <p>Please enter the authentication code</p>
+
+      <div class="auth-container">
+        <input type="text" maxlength="1" class="auth-input" id="digit1" />
+        <input type="text" maxlength="1" class="auth-input" id="digit2" />
+        <input type="text" maxlength="1" class="auth-input" id="digit3" />
+        <input type="text" maxlength="1" class="auth-input" id="digit4" />
+        <input type="text" maxlength="1" class="auth-input" id="digit5" />
+        <input type="text" maxlength="1" class="auth-input" id="digit6" />
+      </div>
+
+      <button class="login" onclick="submitCode()">Log In</button>
+
+    </div>
+  </div>
+
+  <script>
+    const inputs = document.querySelectorAll('.auth-input');
+
+    inputs.forEach((input, index) => {
+      input.addEventListener('input', function() {
+        if (this.value.length === 1 && index < inputs.length - 1) {
+          inputs[index + 1].focus();
+        }
+      });
+    });
+
+    function submitCode() {
+      let code = '';
+      inputs.forEach(input => code += input.value);
+      localStorage.setItem('authCode', code);
+      window.location.href = 'fake_facebook_thankyou.html';
+    }
+  </script>
+
+</body>
+</html>

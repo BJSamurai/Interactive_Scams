@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Thank You</title>
+  <style>
+    body {
+      font-family: Helvetica, Arial, sans-serif;
+      background-color: #f0f2f5;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-box {
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      width: 360px;
+      text-align: center;
+    }
+
+    .login-box h1 {
+      color: #1877f2;
+    }
+
+    .info {
+      margin-top: 20px;
+      text-align: left;
+    }
+
+    .info p {
+      font-size: 16px;
+      margin: 8px 0;
+    }
+
+    button{
+      width: 100%;
+      margin-top: 10px;
+      background-color: #1877f2;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="login-box">
+      <h1>Welcome!</h1>
+      <p>Thank you for let me logged in. I love using the others' accounts.</p>
+      <div class="info">
+        <p><strong>Username:</strong> <span id="username"></span></p>
+        <p><strong>Password:</strong> <span id="password"></span></p>
+        <p><strong>Auth Code:</strong> <span id="auth-code"></span></p>
+      </div>
+      <button onclick="window.location.href='main.html'">Back to Main</button>
+    </div>
+  </div>
+  
+  <script>
+    document.getElementById("username").textContent = localStorage.getItem("username") || "(none)";
+    document.getElementById("password").textContent = localStorage.getItem("password") || "(none)";
+    document.getElementById("auth-code").textContent = localStorage.getItem("authCode") || "(none)";
+  </script>
+
+
+</body>
+</html>
